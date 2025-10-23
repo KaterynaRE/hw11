@@ -1,8 +1,8 @@
 import { usePathname, useRouter } from "expo-router";
 import { StyleSheet, useColorScheme, Pressable, View, Text } from "react-native";
-import ThemedView from "../../components/ThemedView";
-import ThemedText from "../../components/ThemedText";
-import { AsteroidContext } from "../../contexts/AsteroidContext";
+import ThemedView from "../../../components/ThemedView";
+import ThemedText from "../../../components/ThemedText";
+import { AsteroidContext } from "../../../contexts/AsteroidContext";
 import { useEffect, useContext, useState, useMemo } from "react";
 
 export default function Asteroids() {

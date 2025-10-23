@@ -1,9 +1,9 @@
 import { Button, Keyboard, TextInput, TouchableWithoutFeedback } from "react-native";
-import ThemedView from "../../../components/ThemedView";
+import ThemedView from "../../../../components/ThemedView";
 import { useEffect, useReducer, useState } from "react";
-import ThemedTextInput from "../../../components/ThemedTextInput";
+import ThemedTextInput from "../../../../components/ThemedTextInput";
 import { Link, useLocalSearchParams, useRouter } from "expo-router";
-import { useAsteroid } from "../../../hooks/UseAsteroid";
+import { useAsteroid } from "../../../../hooks/UseAsteroid";
 
 
 export default function UpdateAster() {

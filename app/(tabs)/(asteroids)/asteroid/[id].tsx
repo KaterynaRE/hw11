@@ -1,12 +1,12 @@
 import { Link, useLocalSearchParams, useRouter } from "expo-router";
-import ThemedText from "../../../components/ThemedText";
-import ThemedView from "../../../components/ThemedView";
+import ThemedText from "../../../../components/ThemedText";
+import ThemedView from "../../../../components/ThemedView";
 import { StyleSheet, Text, Button } from "react-native";
 import { useColorScheme } from "react-native";
-import { COLORS } from "../../../constants/colors";
+import { COLORS } from "../../../../constants/colors";
 import { useEffect, useState } from "react";
 import AsterCard from "../asterCard";
-import { useAsteroid } from "../../../hooks/UseAsteroid";
+import { useAsteroid } from "../../../../hooks/UseAsteroid";
 
 
 export default function AsteroidDetail() {

@@ -3,6 +3,7 @@ import { StyleSheet, useColorScheme } from "react-native";
 import AuthProvider from "../contexts/AuthContext";
 import { SQLiteDatabase, SQLiteProvider } from "expo-sqlite";
 import AsteroidProvider from "../contexts/AsteroidContext";
+import ColorProvider from "../contexts/ColorContext";
 
 const RootLayout = ({ children }) => {
   const colorScheme = useColorScheme();
@@ -30,29 +31,19 @@ const RootLayout = ({ children }) => {
     <SQLiteProvider databaseName="aster.db" onInit={createDbIfNeeded}>
       <AsteroidProvider>
         <AuthProvider>
-          <Stack
-            screenOptions={{
-              headerStyle: { backgroundColor: "#000" },
-              headerTintColor: "#fff",
-              headerTitleStyle: { fontWeight: "bold" },
-              headerShown: false,
-            }}
-          >
-            <Stack.Screen
-              name="index"
-              options={{
-                title: "Головна",
+          <ColorProvider>
+            {/* <Stack
+              screenOptions={{
+                headerTitleStyle: { fontWeight: "bold" },
                 headerShown: false,
               }}
-            />
-            <Stack.Screen
-              name="Asteroids"
-              options={{
-                title: "Астероїди",
-                headerShown: true,
-              }}
-            />
-          </Stack>
+            > */}
+              <Stack screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="index" />
+                <Stack.Screen name="(tabs)/(asteroids)" />
+                <Stack.Screen name="settings" /> 
+              </Stack>
+          </ColorProvider>
         </AuthProvider>
       </AsteroidProvider>
     </SQLiteProvider>
@@ -60,6 +51,4 @@ const RootLayout = ({ children }) => {
 };
 export default RootLayout;
 
-const styles = StyleSheet.create({
- 
-});
+const styles = StyleSheet.create({});

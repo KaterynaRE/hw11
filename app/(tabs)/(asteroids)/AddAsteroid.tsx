@@ -5,11 +5,11 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import { useRouter, Link } from "expo-router";
-import { useAsteroid } from "../../hooks/UseAsteroid";
-import ThemedView from "../../components/ThemedView";
+import { useAsteroid } from "../../../hooks/UseAsteroid";
+import ThemedView from "../../../components/ThemedView";
 import { useReducer, useState } from "react";
-import ThemedTextInput from "../../components/ThemedTextInput";
-import ThemedText from "../../components/ThemedText";
+import ThemedTextInput from "../../../components/ThemedTextInput";
+import ThemedText from "../../../components/ThemedText";
 
 export default function AddAsteroid() {
   const [ObjectT, setObject] = useState("");
